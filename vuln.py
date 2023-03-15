@@ -59,3 +59,18 @@ def main():
 if __name__ == "__main__":
     main()
 
+# Final report
+print("="*50)
+print("Vulnerability Report")
+print("="*50)
+
+if len(vulnerable_hosts) == 0:
+    print("No vulnerabilities found.")
+else:
+    print(f"{len(vulnerable_hosts)} hosts found with vulnerabilities:")
+    for host, vulns in vulnerable_hosts.items():
+        print(f"- Host {host} is vulnerable to the following exploits:")
+        for vuln in vulns:
+            print(f"\t- {vuln}")
+
+print("="*50)
